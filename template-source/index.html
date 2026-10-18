@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MandiSetu — India's Direct Factory-to-Buyer B2B Marketplace</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏭</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- ===== NEW SECTION: Premium offer / promo banner ===== -->
+<div class="promo-banner" id="promoBanner">
+  <div class="container-xl promo-inner">
+    <span class="promo-badge">🎉 Limited Time</span>
+    <div class="promo-text">Grow Your Business – <strong>Get 3 Months Free</strong> Premium Business Listing</div>
+    <a href="#" class="promo-cta">Claim Offer <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0A3D62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <button class="promo-close" id="promoClose" aria-label="Dismiss offer" type="button">×</button>
+  </div>
+</div>
+
+<!-- ===== NEW SECTION: Utility / announcement bar ===== -->
+<div class="util-bar">
+  <div class="container-xl d-flex align-items-center justify-content-between flex-wrap gap-1 py-1">
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      <span>🚚 Pan-India Logistics Network</span>
+      <span class="d-none d-sm-inline">🔒 100% Escrow-Protected Payments</span>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <a href="tel:+919876543210" class="d-none d-sm-inline">📞 +91 98765 43210</a>
+      <a href="#">Download App</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <div class="container-xl py-2">
+    <div class="d-flex align-items-center gap-3 gap-lg-4">
+      <a href="#" class="brand flex-shrink-0">
+        <span class="mark">MS</span>
+        <span>Mandi<span class="setu">Setu</span></span>
+      </a>
+
+      <div class="search-shell d-none d-lg-flex flex-grow-1">
+        <select>
+          <option>All Categories</option>
+          <option>Machinery</option>
+          <option>Packaging</option>
+          <option>Textiles</option>
+          <option>Electronics</option>
+          <option>Chemicals</option>
+        </select>
+        <input type="text" placeholder="Search products, suppliers, RFQs...">
+        <button aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div class="d-none d-lg-flex align-items-center gap-2 flex-shrink-0">
+        <a href="#" class="btn-mandi-outline">Login / Register</a>
+        <a href="#" class="btn-mandi-solid">Sell With Us</a>
+      </div>
+
+      <button class="btn d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#14161C" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Secondary nav bar ===== -->
+<div class="subnav d-none d-md-block">
+  <div class="container-xl">
+    <div class="subnav-links">
+      <a href="#categories"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> All Categories</a>
+      <a href="#suppliers">Verified Suppliers</a>
+      <a href="#rfq">Post Your Requirement</a>
+    </div>
+    <a href="#" class="btn-mandi-solid">Sell With Us</a>
+  </div>
+</div>
+
+<!-- Mobile off-canvas menu -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header border-bottom">
+    <span class="brand"><span class="mark">MS</span> Mandi<span class="setu">Setu</span></span>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="search-shell mb-3">
+      <input type="text" placeholder="Search products, suppliers...">
+      <button><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <a href="#categories" class="d-block py-2 border-bottom fw-semibold">All Categories</a>
+    <a href="#suppliers" class="d-block py-2 border-bottom fw-semibold">Verified Suppliers</a>
+    <a href="#rfq" class="d-block py-2 border-bottom fw-semibold">Post Your Requirement</a>
+    <a href="#works" class="d-block py-2 border-bottom fw-semibold">How It Works</a>
+    <a href="#stories" class="d-block py-2 border-bottom fw-semibold">Success Stories</a>
+    <div class="d-flex gap-2 mt-3">
+      <a href="#" class="btn-mandi-outline flex-fill text-center">Login</a>
+      <a href="#" class="btn-mandi-solid flex-fill text-center">Sell With Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NEW SECTION: Trust & certification badges strip ===== -->
+<div class="trust-badges">
+  <div class="container-xl">
+    <div class="row-inner">
+      <span class="tb-label">Certified &amp; Trusted By</span>
+      <span class="badge-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v6c0 5-3.4 8.4-7 11-3.6-2.6-7-6-7-11V5l7-3z" stroke="currentColor" stroke-width="1.8"/></svg> ISO 9001:2015 Certified</span>
+      <span class="badge-chip emerald"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg> GST-Verified Transactions</span>
+      <span class="badge-chip gold"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.8"/></svg> RBI-Regulated Escrow Partner</span>
+      <span class="badge-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M4 8l8-5 8 5-8 5-8-5z" stroke="currentColor" stroke-width="1.8"/><path d="M4 8v8l8 5 8-5V8" stroke="currentColor" stroke-width="1.8"/></svg> Startup India Recognized</span>
+      <span class="badge-chip emerald"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="9" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="14.5" r="1.2" fill="currentColor"/></svg> 256-bit SSL Secured</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Hero banner (full width, real photo background) ===== -->
+<section class="main-split">
+  <div class="hero-banner hero-anim">
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1684695749267-233af13276d0?auto=format&fit=crop&w=1920&q=80" alt="Wholesale warehouse stacked with pallets and boxes">
+    <div class="container-xl">
+      <div class="content">
+        <div class="kicker">India's growing B2B network</div>
+        <h1>Your direct factory-to-buyer marketplace</h1>
+        <p>Wholesale products and raw materials, sourced straight from verified manufacturers — no middlemen, transparent pricing.</p>
+        <div class="btn-row">
+          <a href="#categories" class="btn-hero-primary">Explore Wholesale Deals</a>
+          <a href="#" class="btn-hero-ghost">Join as a Supplier</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xl">
+    <div class="trust-strip">
+      <div class="item">
+        <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v6c0 5-3.4 8.4-7 11-3.6-2.6-7-6-7-11V5l7-3z" stroke="#137A5B" stroke-width="1.8"/><path d="M9 12l2 2 4-4" stroke="#137A5B" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        100% Verified Suppliers
+      </div>
+      <div class="item">
+        <span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="#14161C" stroke-width="1.8"/><path d="M8 10V7a4 4 0 018 0v3" stroke="#14161C" stroke-width="1.8"/></svg></span>
+        Secure Trading with Escrow
+      </div>
+      <div class="item">
+        <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M4 8l8-5 8 5-8 5-8-5z" stroke="#E67E22" stroke-width="1.8"/><path d="M4 8v8l8 5 8-5V8" stroke="#E67E22" stroke-width="1.8"/></svg></span>
+        5,000+ Categories
+      </div>
+      <div class="item">
+        <span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v10H8l-4 4V5z" stroke="#15171D" stroke-width="1.8"/></svg></span>
+        24/7 Dedicated Support
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEW SECTION: Platform stats bar (reuses existing .stat-strip styles) ===== -->
+<div class="stat-strip">
+  <div class="container-xl d-flex flex-wrap justify-content-center gap-2 gap-md-3">
+    <div class="stat-card text-center"><div class="num" data-count="10000" data-suffix="+">0</div><div class="label">Verified Suppliers</div></div>
+    <div class="stat-card text-center"><div class="num" data-count="50000" data-suffix="+">0</div><div class="label">Monthly Buyers</div></div>
+    <div class="stat-card text-center"><div class="num" data-count="100" data-suffix="+">0</div><div class="label">Trade Hubs</div></div>
+    <div class="stat-card text-center"><div class="num" data-count="1200" data-prefix="₹" data-suffix=" Cr+">0</div><div class="label">Trade Value Facilitated</div></div>
+    <div class="stat-card text-center"><div class="num" data-static="4.8/5">0</div><div class="label">Average Buyer Rating</div></div>
+  </div>
+</div>
+
+<!-- ===== NEW SECTION: Live wholesale market ticker ===== -->
+<div class="market-ticker" aria-label="Live indicative wholesale prices">
+  <div class="tk-label"><span class="live-dot"></span> Live Mandi Rates</div>
+  <div class="tk-track">
+    <span class="tk-item">CNC Components <span class="tk-price">₹38/pc</span> <span class="tk-up">▲ 1.2%</span></span>
+    <span class="tk-item">Cotton Yarn (Combed) <span class="tk-price">₹268/kg</span> <span class="tk-down">▼ 0.6%</span></span>
+    <span class="tk-item">Corrugated Boxes <span class="tk-price">₹14/pc</span> <span class="tk-up">▲ 0.8%</span></span>
+    <span class="tk-item">Industrial Solvent <span class="tk-price">₹96/ltr</span> <span class="tk-up">▲ 2.1%</span></span>
+    <span class="tk-item">PCB Assembly <span class="tk-price">₹210/pc</span> <span class="tk-down">▼ 1.4%</span></span>
+    <span class="tk-item">LED Driver Modules <span class="tk-price">₹64/pc</span> <span class="tk-up">▲ 0.4%</span></span>
+    <span class="tk-item">Steel Billets <span class="tk-price">₹52,400/MT</span> <span class="tk-down">▼ 0.9%</span></span>
+    <span class="tk-item">PVC Resin <span class="tk-price">₹88/kg</span> <span class="tk-up">▲ 1.7%</span></span>
+    <span class="tk-item" aria-hidden="true">CNC Components <span class="tk-price">₹38/pc</span> <span class="tk-up">▲ 1.2%</span></span>
+    <span class="tk-item" aria-hidden="true">Cotton Yarn (Combed) <span class="tk-price">₹268/kg</span> <span class="tk-down">▼ 0.6%</span></span>
+    <span class="tk-item" aria-hidden="true">Corrugated Boxes <span class="tk-price">₹14/pc</span> <span class="tk-up">▲ 0.8%</span></span>
+    <span class="tk-item" aria-hidden="true">Industrial Solvent <span class="tk-price">₹96/ltr</span> <span class="tk-up">▲ 2.1%</span></span>
+    <span class="tk-item" aria-hidden="true">PCB Assembly <span class="tk-price">₹210/pc</span> <span class="tk-down">▼ 1.4%</span></span>
+    <span class="tk-item" aria-hidden="true">LED Driver Modules <span class="tk-price">₹64/pc</span> <span class="tk-up">▲ 0.4%</span></span>
+    <span class="tk-item" aria-hidden="true">Steel Billets <span class="tk-price">₹52,400/MT</span> <span class="tk-down">▼ 0.9%</span></span>
+    <span class="tk-item" aria-hidden="true">PVC Resin <span class="tk-price">₹88/kg</span> <span class="tk-up">▲ 1.7%</span></span>
+  </div>
+</div>
+
+<!-- ===== NEW SECTION: Why Choose Us ===== -->
+<section class="why-choose section-pad" id="why-choose">
+  <div class="container-xl">
+    <div class="sec-head text-center mx-auto" style="max-width:560px;">
+      <span class="eyebrow">Why MandiSetu</span>
+      <h2>Built for Serious Trade, Not Just Listings</h2>
+      <p class="mx-auto">Every supplier is verified and every lead is genuine — so you spend time closing deals, not chasing dead ends.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon c-navy"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg></div>
+        <h3>Verified Business Leads</h3>
+        <p>Every buyer inquiry is screened before it reaches you — no bots, no time-wasters, only genuine trade leads.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon c-green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v10H8l-4 4V5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Direct Buyer Contact</h3>
+        <p>Chat and negotiate directly with buyers or suppliers — no gatekeepers, no hidden commissions on the conversation.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon c-gold"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5.5c0-1.9-2.2-3.5-5-3.5S7 3.6 7 5.5 9.2 9 12 9s5 1.6 5 3.5-2.2 3.5-5 3.5-5-1.6-5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Zero Commission</h3>
+        <p>List, negotiate and close deals without MandiSetu taking a cut — what you agree with your trade partner is what you keep.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon c-navy"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v6c0 5-3.4 8.4-7 11-3.6-2.6-7-6-7-11V5l7-3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>100% Trusted Suppliers</h3>
+        <p>GST-verified businesses with ISO and Startup India recognition — trade with confidence, backed by escrow protection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Categories + Quick RFQ (one row, then full width below) ===== -->
+<section class="section-pad pt-3 pb-4" id="categories">
+  <div class="container-xl">
+    <div class="row g-3 align-items-start">
+      <div class="col-md-7">
+        <div class="cat-section-title">Top Industry Categories <span class="count">(12)</span></div>
+        <div class="row g-2">
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24"><circle cx="7" cy="16.5" r="4.6" fill="#B9C4D0"/><circle cx="7" cy="16.5" r="4.6" fill="none" stroke="#8A96A3" stroke-width="1.5"/><g fill="#8A96A3"><rect x="6.1" y="10.4" width="1.8" height="2.2" rx=".5"/><rect x="6.1" y="19.9" width="1.8" height="2.2" rx=".5"/><rect x="1.2" y="15.6" width="2.2" height="1.8" rx=".5"/><rect x="10.6" y="15.6" width="2.2" height="1.8" rx=".5"/></g><circle cx="7" cy="16.5" r="1.7" fill="#2F3B47"/><path d="M11.2 12.3c2.1-2.9 3.5-6.2 3.6-8.6" stroke="#2F3B47" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M14.8 3.7c1.6-.7 3-.3 3.9.8" stroke="#2F3B47" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M17.9 3.3l1.7 1.5-1 1.9-2.1-.7z" fill="#E8720C"/></svg></div>
+              <h6>Industrial Machinery</h6>
+              <div class="cat-photos"><span style="background:#8A96A3"><img loading="lazy" src="https://picsum.photos/seed/indmach1/120/120" alt=""></span><span style="background:#B9C4D0"><img loading="lazy" src="https://picsum.photos/seed/indmach2/120/120" alt=""></span><span style="background:#5A6B7B"><img loading="lazy" src="https://picsum.photos/seed/indmach3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">1,240+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24"><path d="M3 8.5l9-4 9 4-9 4z" fill="#F0C688"/><path d="M3 8.5v8.5l9 4v-8.5z" fill="#D9A15A"/><path d="M21 8.5v8.5l-9 4v-8.5z" fill="#B87D3B"/><path d="M3 8.5l4.4-1.9 9 4-4.4 1.9z" fill="#F7E0B8" opacity=".75"/></svg></div>
+              <h6>Packaging Materials</h6>
+              <div class="cat-photos"><span style="background:#D9A15A"><img loading="lazy" src="https://picsum.photos/seed/pkgmat1/120/120" alt=""></span><span style="background:#F0C688"><img loading="lazy" src="https://picsum.photos/seed/pkgmat2/120/120" alt=""></span><span style="background:#C08A47"><img loading="lazy" src="https://picsum.photos/seed/pkgmat3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">860+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24"><path d="M9 3L5 5.5l1.6 3L9 7.2V20a1 1 0 001 1h4a1 1 0 001-1V7.2l2.4 1.3 1.6-3L15 3l-1.4 1.6a2.2 2.2 0 01-3.2 0z" fill="#5C8CC7"/><path d="M9 7.2V20h1.5V6.4z" fill="#4A76A8"/><rect x="9.6" y="11" width="4.8" height="1.3" rx=".6" fill="#E8F0F8" opacity=".6"/></svg></div>
+              <h6>Raw Textiles</h6>
+              <div class="cat-photos"><span style="background:#7FA7D9"><img loading="lazy" src="https://picsum.photos/seed/rawtex1/120/120" alt=""></span><span style="background:#4A76A8"><img loading="lazy" src="https://picsum.photos/seed/rawtex2/120/120" alt=""></span><span style="background:#B9CDE8"><img loading="lazy" src="https://picsum.photos/seed/rawtex3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">2,100+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2" fill="#2E9E6B"/><rect x="8" y="8" width="8" height="8" rx="1" fill="#1B4275"/><g stroke="#2E9E6B" stroke-width="1.4"><line x1="9" y1="2" x2="9" y2="5"/><line x1="15" y1="2" x2="15" y2="5"/><line x1="9" y1="19" x2="9" y2="22"/><line x1="15" y1="19" x2="15" y2="22"/><line x1="2" y1="9" x2="5" y2="9"/><line x1="2" y1="15" x2="5" y2="15"/><line x1="19" y1="9" x2="22" y2="9"/><line x1="19" y1="15" x2="22" y2="15"/></g><circle cx="10.4" cy="10.4" r="1" fill="#F2B233"/><circle cx="13.6" cy="13.6" r="1" fill="#E8720C"/></svg></div>
+              <h6>Electronics &amp; Components</h6>
+              <div class="cat-photos"><span style="background:#2E9E6B"><img loading="lazy" src="https://picsum.photos/seed/elec1/120/120" alt=""></span><span style="background:#1B4275"><img loading="lazy" src="https://picsum.photos/seed/elec2/120/120" alt=""></span><span style="background:#5FC490"><img loading="lazy" src="https://picsum.photos/seed/elec3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">1,580+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24"><rect x="1.8" y="14.3" width="15.5" height="2.7" rx="1.3" fill="#B9814A" transform="rotate(-45 1.8 14.3)"/><rect x="12.3" y="2.6" width="7" height="4.6" rx="1" fill="#2F3B47" transform="rotate(-45 12.3 2.6)"/><path d="M6.3 4.2a3.3 3.3 0 014.4 4.4l9 9-2.1 2.1-9-9a3.3 3.3 0 01-4.4-4.4l2.2 2.2 1.7-.4.4-1.7z" fill="#E8720C"/></svg></div>
+              <h6>Construction Materials</h6>
+              <div class="cat-photos"><span style="background:#B9C4D0"><img loading="lazy" src="https://picsum.photos/seed/constmat1/120/120" alt=""></span><span style="background:#8A96A3"><img loading="lazy" src="https://picsum.photos/seed/constmat2/120/120" alt=""></span><span style="background:#5A6B7B"><img loading="lazy" src="https://picsum.photos/seed/constmat3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">990+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="32" height="32" viewBox="0 0 24 24"><path d="M8 2h4v4.5l2.6 6.3A2 2 0 0112.8 15.5H7.2a2 2 0 01-1.8-2.7L8 6.5z" fill="#F2B233"/><rect x="8" y="2" width="4" height="1.4" fill="#D9932A"/><rect x="7.4" y="11.3" width="5.2" height="4.2" fill="#FCE3AC" opacity=".7"/><path d="M15.2 6h3v3l2.1 4.7a1.7 1.7 0 01-1.6 2.4h-4a1.7 1.7 0 01-1.6-2.4L15.2 9z" fill="#5C8CC7"/><rect x="15.2" y="6" width="3" height="1.1" fill="#4A76A8"/><rect x="3" y="19.6" width="18" height="1.6" rx=".8" fill="#8A96A3"/></svg></div>
+              <h6>Chemical &amp; Distribution</h6>
+              <div class="cat-photos"><span style="background:#8A5CC7"><img loading="lazy" src="https://picsum.photos/seed/chemdist1/120/120" alt=""></span><span style="background:#C79BEA"><img loading="lazy" src="https://picsum.photos/seed/chemdist2/120/120" alt=""></span><span style="background:#5C3A8A"><img loading="lazy" src="https://picsum.photos/seed/chemdist3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">710+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24"><circle cx="17" cy="6" r="3.2" fill="#F2B233"/><path d="M3 20l5.5-8.5a2 2 0 012.9-.5l3.6 2.7a2 2 0 002.9-.5L21 8" stroke="#4C9A4C" stroke-width="1.8" fill="none" stroke-linecap="round"/><ellipse cx="6.5" cy="19.5" rx="3.5" ry="1.6" fill="#6FB86F"/></svg></div>
+              <h6>Agricultural Equipment</h6>
+              <div class="cat-photos"><span style="background:#6FB86F"><img loading="lazy" src="https://picsum.photos/seed/agriequip1/120/120" alt=""></span><span style="background:#4C9A4C"><img loading="lazy" src="https://picsum.photos/seed/agriequip2/120/120" alt=""></span><span style="background:#F2B233"><img loading="lazy" src="https://picsum.photos/seed/agriequip3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">540+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="3.5" rx="1" fill="#B9814A"/><rect x="5" y="9" width="14" height="3" rx="1" fill="#D9A15A"/><rect x="6" y="4" width="2.2" height="18" fill="#8A5C2E"/><rect x="15.8" y="4" width="2.2" height="18" fill="#8A5C2E"/></svg></div>
+              <h6>Furniture &amp; Woodwork</h6>
+              <div class="cat-photos"><span style="background:#D9A15A"><img loading="lazy" src="https://picsum.photos/seed/furniture1/120/120" alt=""></span><span style="background:#8A5C2E"><img loading="lazy" src="https://picsum.photos/seed/furniture2/120/120" alt=""></span><span style="background:#B9814A"><img loading="lazy" src="https://picsum.photos/seed/furniture3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">470+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M3 16l1.6-6.4A2 2 0 016.5 8h11a2 2 0 011.9 1.6L21 16z" fill="#C0392B"/><rect x="2" y="15" width="20" height="4" rx="1.5" fill="#8A96A3"/><path d="M6.5 8.5h11l1.2 4h-13.4z" fill="#E67E22"/><circle cx="6.5" cy="19" r="1.8" fill="#2F3B47"/><circle cx="17.5" cy="19" r="1.8" fill="#2F3B47"/></svg></div>
+              <h6>Automotive Components</h6>
+              <div class="cat-photos"><span style="background:#8A96A3"><img loading="lazy" src="https://picsum.photos/seed/autoparts1/120/120" alt=""></span><span style="background:#C0392B"><img loading="lazy" src="https://picsum.photos/seed/autoparts2/120/120" alt=""></span><span style="background:#2F3B47"><img loading="lazy" src="https://picsum.photos/seed/autoparts3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">920+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M4 3h13v6.5a6.5 6.5 0 01-13 0z" fill="#F2B233"/><path d="M17 6h2.5a2.5 2.5 0 010 5H17z" fill="none" stroke="#D9932A" stroke-width="1.6"/><rect x="8.5" y="19" width="7" height="1.8" rx=".9" fill="#8A5CC7"/><rect x="11" y="15.5" width="2" height="4.5" fill="#8A5CC7"/></svg></div>
+              <h6>Food &amp; Beverage</h6>
+              <div class="cat-photos"><span style="background:#F2B233"><img loading="lazy" src="https://picsum.photos/seed/foodbev1/120/120" alt=""></span><span style="background:#8A5CC7"><img loading="lazy" src="https://picsum.photos/seed/foodbev2/120/120" alt=""></span><span style="background:#D9932A"><img loading="lazy" src="https://picsum.photos/seed/foodbev3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">1,050+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2.5" fill="#E8F0F8"/><rect x="4" y="3" width="16" height="18" rx="2.5" fill="none" stroke="#5C8CC7" stroke-width="1.4"/><rect x="10.4" y="7" width="3.2" height="10" rx="1" fill="#C0392B"/><rect x="7" y="10.4" width="10" height="3.2" rx="1" fill="#C0392B"/></svg></div>
+              <h6>Medical &amp; Healthcare Supplies</h6>
+              <div class="cat-photos"><span style="background:#5C8CC7"><img loading="lazy" src="https://picsum.photos/seed/medsupply1/120/120" alt=""></span><span style="background:#C0392B"><img loading="lazy" src="https://picsum.photos/seed/medsupply2/120/120" alt=""></span><span style="background:#E8F0F8"><img loading="lazy" src="https://picsum.photos/seed/medsupply3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">610+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="cat-tile">
+              <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M9 2h6v3.2l1.6 2.4a2 2 0 01.4 1.2V20a2 2 0 01-2 2H9a2 2 0 01-2-2V8.8a2 2 0 01.4-1.2L9 5.2z" fill="#5EC9C9"/><rect x="9" y="2" width="6" height="1.6" fill="#2E9E9E"/><rect x="7.6" y="11" width="8.8" height="7" rx="1" fill="#E8F8F8" opacity=".55"/></svg></div>
+              <h6>Plastics &amp; Polymers</h6>
+              <div class="cat-photos"><span style="background:#5EC9C9"><img loading="lazy" src="https://picsum.photos/seed/plastics1/120/120" alt=""></span><span style="background:#2E9E9E"><img loading="lazy" src="https://picsum.photos/seed/plastics2/120/120" alt=""></span><span style="background:#B0E8E8"><img loading="lazy" src="https://picsum.photos/seed/plastics3/120/120" alt=""></span></div>
+              <div class="cat-foot"><span class="n">780+ suppliers</span><span class="go"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5" id="rfq">
+        <div class="rfq-card">
+          <h3>Quick RFQ (Request for Quote)</h3>
+          <p>Get quotes from up to 5 verified suppliers within 24 hours — free for buyers.</p>
+          <div class="row g-2 mt-1">
+            <div class="col-12"><input class="form-control" placeholder="Product Name"></div>
+            <div class="col-6"><input class="form-control" placeholder="Quantity (MOQ)"></div>
+            <div class="col-6"><input class="form-control" placeholder="Quantity"></div>
+            <div class="col-12"><input class="form-control" placeholder="Email / Phone"></div>
+            <div class="col-12 mt-1"><button class="btn-mandi-solid">Get Instant Quotes</button></div>
+          </div>
+        </div>
+
+        <!-- ===== AD SLOT: Sidebar Rectangle (300x250 MREC) ===== -->
+        <div class="ad-slot ad-slot--sidebar">
+          <span class="ad-label">Sponsored</span>
+          <!-- AD BANNER: Replace image URL below with your creative (recommended 300x250) -->
+          <a href="#" target="_blank" rel="sponsored noopener" aria-label="Sponsored advertisement">
+            <img src="https://placehold.co/300x250/0A3D62/F39C12?text=Your+Ad+Here+%E2%80%94+300x250" alt="Sponsored advertisement" loading="lazy">
+          </a>
+        </div>
+
+        <div class="feat-panel" id="suppliers">
+          <div class="feat-head">
+            <h6>Featured Manufacturers &amp; Suppliers</h6>
+            <div class="slider-nav feat-nav" data-slider-nav="suppliers">
+              <button type="button" data-dir="-1" aria-label="Previous"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button type="button" data-dir="1" aria-label="Next"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div>
+          <div class="feat-slider" data-slider="suppliers">
+              <div class="feat-item">
+                <div class="feat-top"><img class="feat-avatar-img" loading="lazy" src="https://i.pravatar.cc/60?img=52" alt="Vikram Kohli"><span class="feat-check">✓</span></div>
+                <h6>Vikram Auto Parts <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v.01M12 11v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></h6>
+                <div class="feat-meta"><span class="dot"></span> Verified Badge</div>
+                <div class="feat-meta"><span class="dot"></span> Ludhiana</div>
+                <div class="feat-thumbs"><div><img loading="lazy" src="https://picsum.photos/seed/vk-shop1/120/120" alt=""></div><div><img loading="lazy" src="https://picsum.photos/seed/vk-shop2/120/120" alt=""></div></div>
+              </div>
+              <div class="feat-item">
+                <div class="feat-top"><img class="feat-avatar-img" loading="lazy" src="https://i.pravatar.cc/60?img=33" alt="Sanjay Patel"><span class="feat-check">✓</span></div>
+                <h6>Sanjay Polymers <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v.01M12 11v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></h6>
+                <div class="feat-meta"><span class="dot"></span> Verified Badge</div>
+                <div class="feat-meta"><span class="dot"></span> Vadodara</div>
+                <div class="feat-thumbs"><div><img loading="lazy" src="https://picsum.photos/seed/sp-shop1/120/120" alt=""></div><div><img loading="lazy" src="https://picsum.photos/seed/sp-shop2/120/120" alt=""></div></div>
+              </div>
+              <div class="feat-item">
+                <div class="feat-top"><img class="feat-avatar-img" loading="lazy" src="https://i.pravatar.cc/60?img=14" alt="Naresh Textiles"><span class="feat-check">✓</span></div>
+                <h6>Naresh Textiles <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v.01M12 11v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></h6>
+                <div class="feat-meta"><span class="dot"></span> Verified Badge</div>
+                <div class="feat-meta"><span class="dot"></span> Surat</div>
+                <div class="feat-thumbs"><div><img loading="lazy" src="https://picsum.photos/seed/nt-shop1/120/120" alt=""></div><div><img loading="lazy" src="https://picsum.photos/seed/nt-shop2/120/120" alt=""></div></div>
+              </div>
+              <div class="feat-item">
+                <div class="feat-top"><img class="feat-avatar-img" loading="lazy" src="https://i.pravatar.cc/60?img=68" alt="Deepak Steels"><span class="feat-check">✓</span></div>
+                <h6>Deepak Steels <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v.01M12 11v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></h6>
+                <div class="feat-meta"><span class="dot"></span> Verified Badge</div>
+                <div class="feat-meta"><span class="dot"></span> Jamshedpur</div>
+                <div class="feat-thumbs"><div><img loading="lazy" src="https://picsum.photos/seed/ds-shop1/120/120" alt=""></div><div><img loading="lazy" src="https://picsum.photos/seed/ds-shop2/120/120" alt=""></div></div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AD SLOT: Between-Section Banner (1160x170) ===== -->
+<div class="ad-zone ad-zone--banner">
+  <div class="container-xl">
+    <div class="ad-slot ad-slot--banner">
+      <span class="ad-label">Advertisement</span>
+      <!-- AD BANNER: Replace image URL below with your creative (recommended 1160x170, wide format) -->
+      <a href="#" target="_blank" rel="sponsored noopener" aria-label="Sponsored advertisement">
+        <img src="https://placehold.co/1160x170/0A3D62/F39C12?text=Your+Banner+Ad+Here+%E2%80%94+1160x170" alt="Sponsored advertisement" loading="lazy">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Trending products (own full-width section) ===== -->
+<section class="section-pad" id="products">
+  <div class="container-xl">
+    <div class="sec-head d-flex align-items-end justify-content-between flex-wrap gap-2">
+      <div>
+        <h2 style="font-size:1.5rem;">Trending Wholesale Products / Factory Deals</h2>
+        <p class="mb-0">Popular listings buyers are requesting quotes on right now.</p>
+      </div>
+      <div class="slider-nav" data-slider-nav="products">
+        <button type="button" data-dir="-1" aria-label="Previous"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" data-dir="1" aria-label="Next"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    <div class="slider-block">
+      <div class="product-scroll slider-viewport" data-slider="products">
+        <div class="product-card">
+          <img class="thumb-img" loading="lazy" src="https://picsum.photos/seed/cncparts/300/260" alt="CNC Turned Components">
+          <div class="body"><h6>CNC Turned Components</h6><div class="price">₹38/pc</div><div class="moq">MOQ: 5,000 pcs</div></div>
+        </div>
+        <div class="product-card">
+          <img class="thumb-img" loading="lazy" src="https://picsum.photos/seed/shipboxes/300/260" alt="Corrugated Shipping Boxes">
+          <div class="body"><h6>Corrugated Shipping Boxes</h6><div class="price">₹14/pc</div><div class="moq">MOQ: 1,000 pcs</div></div>
+        </div>
+        <div class="product-card">
+          <img class="thumb-img" loading="lazy" src="https://picsum.photos/seed/pcbboard/300/260" alt="PCB Assembly, Mixed">
+          <div class="body"><h6>PCB Assembly, Mixed</h6><div class="price">₹210/pc</div><div class="moq">MOQ: 200 pcs</div></div>
+        </div>
+        <div class="product-card">
+          <img class="thumb-img" loading="lazy" src="https://picsum.photos/seed/solventdrum/300/260" alt="Industrial Solvent, Grade A">
+          <div class="body"><h6>Industrial Solvent, Grade A</h6><div class="price">₹96/ltr</div><div class="moq">MOQ: 500 ltr</div></div>
+        </div>
+        <div class="product-card">
+          <img class="thumb-img" loading="lazy" src="https://picsum.photos/seed/cottonyarn/300/260" alt="Combed Cotton Yarn">
+          <div class="body"><h6>Combed Cotton Yarn</h6><div class="price">₹268/kg</div><div class="moq">MOQ: 250 kg</div></div>
+        </div>
+        <div class="product-card">
+          <img class="thumb-img" loading="lazy" src="https://picsum.photos/seed/ledmodule/300/260" alt="LED Driver Modules">
+          <div class="body"><h6>LED Driver Modules</h6><div class="price">₹64/pc</div><div class="moq">MOQ: 2,000 pcs</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== How it works ===== -->
+<section class="how-strip section-pad" id="works">
+  <div class="container-xl">
+    <div class="sec-head text-center mx-auto" style="max-width:480px;">
+      <h2 style="font-size:1.5rem;">How It Works: 3 Simple Steps</h2>
+    </div>
+    <div class="how-track">
+      <div class="how-item">
+        <div class="icon-circle c-blue"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h6>Search &amp; Find</h6>
+        <p>Browse categories or post exactly what you need.</p>
+      </div>
+      <div class="how-arrow c-blue d-none d-md-flex">
+        <svg width="34" height="16" viewBox="0 0 34 16" fill="none"><path d="M0 8h30M24 2l8 6-8 6" stroke="currentColor" stroke-width="1.8"/></svg>
+      </div>
+      <div class="how-item">
+        <div class="icon-circle c-green"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 12a5 5 0 0110 0M4 15l3-3 3 3M20 9l-3 3-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h6>Connect &amp; Negotiate</h6>
+        <p>Chat directly with verified suppliers and agree on terms.</p>
+      </div>
+      <div class="how-arrow c-green d-none d-md-flex">
+        <svg width="34" height="16" viewBox="0 0 34 16" fill="none"><path d="M0 8h30M24 2l8 6-8 6" stroke="currentColor" stroke-width="1.8"/></svg>
+      </div>
+      <div class="how-item">
+        <div class="icon-circle c-amber"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="2"/></svg></div>
+        <h6>Trade Securely</h6>
+        <p>Pay via escrow, release funds once goods are confirmed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AD SLOT: Between-Section Banner (1160x170) ===== -->
+<div class="ad-zone ad-zone--banner">
+  <div class="container-xl">
+    <div class="ad-slot ad-slot--banner">
+      <span class="ad-label">Advertisement</span>
+      <!-- AD BANNER: Replace image URL below with your creative (recommended 1160x170, wide format) -->
+      <a href="#" target="_blank" rel="sponsored noopener" aria-label="Sponsored advertisement">
+        <img src="https://placehold.co/1160x170/0A3D62/F39C12?text=Your+Banner+Ad+Here+%E2%80%94+1160x170" alt="Sponsored advertisement" loading="lazy">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Testimonials (orange band) ===== -->
+<section class="testi-band" id="stories">
+  <div class="container-xl">
+    <div class="sec-head d-flex align-items-end justify-content-between flex-wrap gap-2">
+      <div class="mx-auto mx-md-0 text-center text-md-start">
+        <h2 style="font-size:1.5rem;">Client Testimonials &amp; Success Stories</h2>
+      </div>
+      <div class="slider-nav" data-slider-nav="testi">
+        <button type="button" data-dir="-1" aria-label="Previous" style="border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.12);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" data-dir="1" aria-label="Next" style="border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.12);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    <div class="testi-scroll" data-slider="testi">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">Cut our sourcing time for packaging materials from three weeks to four days. The escrow step made the first order painless.</p>
+          <div class="who"><img class="av-img" loading="lazy" src="https://i.pravatar.cc/80?img=59" alt="Rohit Malhotra"><div><div class="name">Rohit Malhotra</div><div class="co">Procurement Head, Delhi</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">As a small foundry, we never had this kind of reach before. Genuine buyer leads, not just window shoppers.</p>
+          <div class="who"><img class="av-img" loading="lazy" src="https://i.pravatar.cc/80?img=47" alt="Sunita Kapoor"><div><div class="name">Sunita Kapoor</div><div class="co">Owner, Kapoor Castings</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">The RFQ tool alone saves my team hours every week — quotes land in one place instead of scattered emails.</p>
+          <div class="who"><img class="av-img" loading="lazy" src="https://i.pravatar.cc/80?img=13" alt="Anil Joshi"><div><div class="name">Anil Joshi</div><div class="co">Plant Manager, Nashik</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">Payments through escrow finally gave our overseas buyers the confidence to place bigger first orders.</p>
+          <div class="who"><img class="av-img" loading="lazy" src="https://i.pravatar.cc/80?img=25" alt="Meera Iyer"><div><div class="name">Meera Iyer</div><div class="co">Export Manager, Coimbatore</div></div></div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEW SECTION: High-converting dual CTA banner (reuses existing .cta-split / .cta-half styles) ===== -->
+<section class="section-pad pt-4" id="get-started">
+  <div class="container-xl">
+    <div class="cta-split">
+      <div class="cta-half buyer">
+        <h4>Sourcing for your business?</h4>
+        <p>Post a free RFQ and get quotes from up to 5 verified suppliers within 24 hours.</p>
+        <a href="#rfq" class="btn-cta">Post a Requirement</a>
+      </div>
+      <div class="cta-half seller">
+        <h4>Manufacturing or supplying goods?</h4>
+        <p>List your catalogue in front of thousands of active B2B buyers, pan-India.</p>
+        <a href="#" class="btn-cta">Become a Verified Seller</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container-xl">
+    <div class="footer-5">
+      <div class="footer-col">
+        <span class="brand" style="color:#fff;"><span class="mark">MS</span> Mandi<span style="color:var(--amber-500);">Setu</span></span>
+        <p class="mt-3" style="font-size:.8rem; max-width:220px;">India's growing network connecting verified factories directly with buyers.</p>
+      </div>
+      <div class="footer-col">
+        <h6>For Buyers</h6>
+        <a href="#">Post a Requirement</a>
+        <a href="#">Browse Categories</a>
+        <a href="#">Track My RFQs</a>
+      </div>
+      <div class="footer-col">
+        <h6>For Suppliers</h6>
+        <a href="#">Register as Supplier</a>
+        <a href="#">Verification Process</a>
+        <a href="#">Seller Dashboard</a>
+      </div>
+      <div class="footer-col">
+        <h6>Legal</h6>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Buyer Protection</a>
+      </div>
+      <div class="footer-col">
+        <h6>Subscribe to Newsletter</h6>
+        <p style="font-size:.78rem;">Weekly sourcing trends, straight to your inbox.</p>
+        <div class="d-flex gap-2 mt-2">
+          <input class="form-control newsletter-input" placeholder="Email address">
+          <button class="btn-mandi-solid" style="white-space:nowrap;">Join</button>
+        </div>
+        <div class="d-flex mt-3">
+          <a href="#" class="social-dot"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M14 8h2V5h-2a3 3 0 00-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8a1 1 0 011-1z" fill="currentColor"/></svg></a>
+          <a href="#" class="social-dot"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.3 1.7-2.2-.8.5-1.7.8-2.6 1a4 4 0 00-6.9 3.6A11.4 11.4 0 014 4.9a4 4 0 001.2 5.3c-.6 0-1.3-.2-1.8-.5v.1a4 4 0 003.2 3.9c-.6.1-1.2.2-1.8.1a4 4 0 003.7 2.8A8 8 0 012 18.6a11.3 11.3 0 006.1 1.8c7.3 0 11.3-6.1 11.3-11.3v-.5c.8-.6 1.4-1.3 1.9-2.1z" fill="currentColor"/></svg></a>
+          <a href="#" class="social-dot"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.6"/><circle cx="16.4" cy="7.6" r="1" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <div>© 2026 MandiSetu. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('[data-slider-nav]').forEach(function(nav){
+  var key = nav.getAttribute('data-slider-nav');
+  var track = document.querySelector('[data-slider="'+key+'"]');
+  if(!track) return;
+  nav.querySelectorAll('button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var dir = parseInt(btn.getAttribute('data-dir'), 10);
+      var card = track.querySelector(':scope > *');
+      var step = card ? (card.getBoundingClientRect().width + 12) : track.clientWidth * 0.8;
+      track.scrollBy({left: dir * step, behavior:'smooth'});
+    });
+  });
+});
+
+/* ---- Promo banner dismiss ---- */
+(function(){
+  var closeBtn = document.getElementById('promoClose');
+  var banner = document.getElementById('promoBanner');
+  if(closeBtn && banner){
+    closeBtn.addEventListener('click', function(){
+      banner.style.display = 'none';
+    });
+  }
+})();
+
+/* ---- Animated stat counters ---- */
+(function(){
+  var nums = document.querySelectorAll('.stat-strip .num');
+  if(!nums.length) return;
+  var animated = false;
+  function easeOutQuad(t){ return t * (2 - t); }
+  function runCounters(){
+    if(animated) return;
+    animated = true;
+    nums.forEach(function(el){
+      if(el.hasAttribute('data-static')){
+        el.textContent = el.getAttribute('data-static');
+        return;
+      }
+      var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      var prefix = el.getAttribute('data-prefix') || '';
+      var suffix = el.getAttribute('data-suffix') || '';
+      var duration = 1400;
+      var start = null;
+      function step(ts){
+        if(!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var value = Math.floor(easeOutQuad(progress) * target);
+        el.textContent = prefix + value.toLocaleString('en-IN') + suffix;
+        if(progress < 1){ requestAnimationFrame(step); }
+        else { el.textContent = prefix + target.toLocaleString('en-IN') + suffix; }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var strip = document.querySelector('.stat-strip');
+  if(strip && 'IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ runCounters(); obs.disconnect(); }
+      });
+    }, {threshold:.3});
+    obs.observe(strip);
+  } else {
+    runCounters();
+  }
+})();
+</script>
+</body>
+</html>
